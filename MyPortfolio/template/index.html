@@ -28,6 +28,7 @@
 
         <link href='{% static "style/css/templatemo-first-portfolio-style.css" %}' rel="stylesheet">
         <link href="{% static 'style/css/ProjectDescription.css' %}" rel="stylesheet">
+        <link href="{% static 'style/css/responsive.css' %}" rel="stylesheet">
 
 <!--
 
@@ -248,8 +249,8 @@ https://templatemo.com/tm-578-first-portfolio
                         </div>
                     <div class="skill_wrap" style="display: flex; justify-content: center; align-items: center;">
                         {% for myskill in queryobj.MySkill.all %}
-                        <div class="skill_set" style="display: flex; justify-content: center; align-items: center; margin: 0 20px;">
-                             <img src="images/{{myskill.logo}}" class="clients-image img-fluid" alt="">
+                        <div class="skill_set" style="display: flex; justify-content: center; align-items: center;">
+                             <img src="images/{{myskill.logo}}" style="max-width: none;" class="clients-image img-fluid" alt="">
                         </div>
 
                         {% endfor %}

@@ -36,7 +36,8 @@ def ModifiedValues(form):
 def PostForm(request):
     form = request.POST
     form = ModifiedValues(form)
-    print(form)
+    
+
     
     
     return HttpResponse("form submitted")
