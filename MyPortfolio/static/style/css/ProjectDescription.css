@@ -1,0 +1,45 @@
+.skill_tag span{
+    padding: 0.4rem 1rem;
+    margin-bottom: 1.5rem;
+    margin-right: 1.5rem;
+    font-size: 16px;
+    background: rgba(153,153,153,.2);
+    border-radius: 5px;
+    font-weight: 600;
+    color: #666;
+}
+.skill_tag{
+    display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+.card_detail{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    padding: 15px 0;
+}
+.Crad_project{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+    box-shadow: 0px 1px 8px #00000016;
+    margin: 20px 0px;
+    padding: 0px 10px;
+    border-radius: 10px;
+    transition: 250ms;
+}
+.Crad_project:hover{
+    box-shadow: 2px 3px 8px #0000001f;
+    zoom: 1%;
+}
+.btn_link{
+    display: flex;
+    gap: 20px;
+}
+.skill_tags_wrap h3{
+    font-weight: 700;
+  margin-bottom: 21px;
+}
