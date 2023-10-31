@@ -1,22 +1,193 @@
-.skill_set img{
-    width: 100% !important;
+:root {
+  --white-color: #ffffff;
+  --primary-color: #535da1;
+  --secondary-color: #14b789;
+  --section-bg-color: #f9f9f9;
+  --dark-color: #000000;
+  --p-color: #717275;
+  --border-color: #e9eaeb;
+  --featured-border-color: #727aab;
+
+  --body-font-family: "DM Sans", sans-serif;
+
+  --h1-font-size: 62px;
+  --h2-font-size: 48px;
+  --h3-font-size: 36px;
+  --h4-font-size: 32px;
+  --h5-font-size: 24px;
+  --h6-font-size: 22px;
+  --p-font-size: 18px;
+  --menu-font-size: 12px;
+  --copyright-font-size: 14px;
+
+  --border-radius-large: 100px;
+  --border-radius-medium: 20px;
+  --border-radius-small: 10px;
+
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
 }
-@media only screen and (max-width: 1200px){
-  .skill_wrap{
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-  .skill_wrap .skill_set{
+
+.custome_buttonx {
+  display: none;
+}
+.skill_set img {
+  width: 100% !important;
+}
+.skill_wrap {
+  flex-wrap: wrap;
+  gap: 20px;
+}
+@media only screen and (max-width: 1200px) {
+  .skill_wrap .skill_set {
     align-items: center;
     background: #fff;
-    box-shadow: 0 1.07692px 20.4615px rgba(0,0,0,.125);
+    box-shadow: 0 1.07692px 20.4615px rgba(0, 0, 0, 0.125);
     cursor: pointer;
     display: flex;
     height: 6rem;
     justify-content: center;
     overflow: hidden;
-    transition: all .2s;
+    transition: all 0.2s;
     width: 6rem;
     padding: 5px;
+  }
+  .custome_button {
+    width: 146px;
+    padding: 8px 0 !important;
+    font-size: 15px !important;
+  }
+  .list_left {
+    margin-left: 0 !important;
+  }
+  .head_text {
+    text-align: center;
+    font-size: 2rem !important;
+  }
+  .skill_tag {
+    gap: 8px;
+  }
+  .skill_tag span {
+    margin-bottom: 0rem;
+    margin-right: 0rem;
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 1200px) and (min-width: 1000px) {
+  .contact_details p,
+  .contact_details a {
+    font-size: 14px !important;
+  }
+  .services_contact span {
+    font-size: 12px !important;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .lets_btn {
+    background-color: var(--secondary-color);
+  }
+  .lets_btn:hover {
+    background-color: var(--primary-color);
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+  }
+  .head_text {
+    font-size: 3rem !important;
+  }
+  .project_container {
+    width: 90% !important;
+  }
+  .btn_link button {
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .head_text {
+    font-size: 2rem !important;
+  }
+  .head_text_open {
+    font-size: 2rem !important;
+  }
+  .footer_conatiner {
+    max-width: 80% !important;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .about_me {
+    padding-bottom: 0px !important;
+  }
+  .about_me_desc p,
+  .card_detail p {
+    font-size: 14px !important;
+  }
+  .about_me_desc p,
+  .about_me_desc h3 {
+    padding: 0 10px;
+  }
+  .head_text {
+    font-size: 1.8rem !important;
+  }
+  .head_text_open {
+    font-size: 1.8rem !important;
+  }
+  .info_box span {
+    font-size: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .info_box p {
+    display: flex;
+    align-items: center;
+  }
+  .info_box .profile-small-title {
+    padding: 10px 15px;
+    min-width: 100px;
+    margin: 0 5vw;
+  }
+  .skill_wrap {
+    gap: 10px;
+  }
+  .skill_wrap .skill_set {
+    width: 5rem;
+    height: 5rem;
+  }
+  .about_thumb_define {
+    width: 89% !important;
+    margin: 0 auto;
+  }
+  .about_thumb_define strong {
+    font-size: 2.4rem !important;
+  }
+  .about_thumb_define p {
+    font-size: 14px;
+  }
+  .services_details .s_desc {
+    font-size: 14px !important;
+  }
+  .project_thumb {
+    padding: 22px !important;
+  }
+  .project_thumb h3 {
+    font-size: 24px !important;
+  }
+  .footer_wrap {
+    padding: 10px 0 !important;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .project_thumb {
+    padding: 10px !important;
+  }
+  .project_thumb h3 {
+    font-size: 18px !important;
+    text-align: center;
+  }
+  .footer_conatiner {
+    max-width: 95% !important;
+  }
+  .footer_conatiner p,
+  .footer_conatiner span {
+    font-size: 14px;
   }
 }
