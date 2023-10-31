@@ -1,5 +1,5 @@
-from django.shortcuts import render,redirect
-from django.http import HttpResponse
+from django.shortcuts import render
+from django.http import HttpResponse,JsonResponse
 from .models import Profile,Project,Services,ContactForm
 from .SMTP import SendMail
 from .FormSerializer import ContactFormSerailizer
@@ -48,7 +48,7 @@ def PostForm(request):
         form = ModifiedValues(form)
 
         # Send the initial confirmation email
-      #  SendMail(form, form["__services"], form["Description"], "piyushkumarcse44@gmail.com", True)
+        SendMail(form, form["__services"], form["Description"], "piyushkumarcse44@gmail.com", True)
 
         # Create a ContactForm instance and set the many-to-many field 'Services'
         contact_form = ContactForm.objects.create(
@@ -60,18 +60,20 @@ def PostForm(request):
         contact_form.Services.set(form["__services"])
 
         # Send an email to the provided email address
-      #  SendMail(form, "", "", form['Email'], False)
+        SendMail(form, "", "", form['Email'], False)
 
         
-        return redirect(HomePage)
+        return JsonResponse({'success': True})  # Return a success response
         
 
     except ObjectDoesNotExist:
-        return HttpResponse("Object not found", status=404)  # Return a 404 response for object not found
+        return JsonResponse({'success': False, 'error': 'Invalid request method'})
+  
 
     except Exception as e:
         # Handle other exceptions here and return an appropriate response
-        return HttpResponse(f"An error occurred: {str(e)}", status=500)  # Return a 500 response for other errors
+        return JsonResponse({'success': False, 'error': 'Invalid request method'})
+
 
    
 
